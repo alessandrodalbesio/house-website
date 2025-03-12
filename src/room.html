@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <section class="mx-auto max-w-7xl">
+        <div class="flex justify-between">
+          <h1 class="text-4xl font-bold py-4">Room Name</h1>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M5.5 15a3.51 3.51 0 0 0 2.36-.93l6.26 3.58a3.06 3.06 0 0 0-.12.85 3.53 3.53 0 1 0 1.14-2.57l-6.26-3.58a2.74 2.74 0 0 0 .12-.76l6.15-3.52A3.49 3.49 0 1 0 14 5.5a3.35 3.35 0 0 0 .12.85L8.43 9.6A3.5 3.5 0 1 0 5.5 15zm12 2a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zm0-13A1.5 1.5 0 1 1 16 5.5 1.5 1.5 0 0 1 17.5 4zm-12 6A1.5 1.5 0 1 1 4 11.5 1.5 1.5 0 0 1 5.5 10z"></path>
+            </svg>
+            <label class="text-md font-semibold ml-4">Share</label>
+          </div>
+        </div>
+      </section> 
+      <section class="mx-auto max-w-7xl mt-4">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="./img/roomA.jpg" alt="Left" class="w-full h-full object-cover rounded-md" style="height: 51vh;" />
+          <div class="grid grid-cols-2 grid-rows-2 gap-2 h-full">
+            <img src="./img/livingroom.jpg" class="w-full h-full object-cover rounded-md" style="height: 25vh;" />
+            <img src="./img/bathroom.jpg" class="w-full h-full object-cover rounded-md" style="height: 25vh;" />
+            <img src="./img/kitchen.jpg" class="w-full h-full object-cover rounded-md" style="height: 25vh;" />
+            <img src="./img/garden.jpg" class="w-full h-full object-cover rounded-md" style="height: 25vh;" />
+          </div>
+        </div>
+      </section>
+      <section class="mx-auto max-w-7xl mt-4">
+        <div class="flex justify-between gap-8">
+            <div class="w-7/10">
+              <div class="flex justify-between items-center">
+                <div>
+                  <h2 class="text-lg font-semibold">Room Name</h2>
+                  <p>1 Letto · 1 Scrivania · Bagno privato</p>
+                </div>
+                <label class="text-lg font-semibold">1000 €/mese + consumi</label>
+              </div>
+              <div class="mt-4">
+                <h2 class="text-lg font-semibold">Descrizione</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris erat lectus, suscipit in tortor ut, pulvinar blandit libero. Vestibulum sit amet posuere neque, in gravida sem. Donec eleifend in risus sed egestas. Nullam id placerat lacus, lacinia aliquet lectus. Morbi id justo dolor. Nullam dolor magna, rutrum ut velit sit amet, fermentum pulvinar leo. Vestibulum vitae placerat tortor. Sed elementum, enim id aliquam luctus, libero mauris cursus justo, ac pretium tellus urna nec massa. Aliquam molestie, lacus sed fermentum tempus, felis quam porttitor lorem, in elementum felis massa eget dui. Etiam vel tincidunt sapien. Sed sapien libero, maximus sit amet lacus sed, laoreet scelerisque lectus. Nam non porttitor sapien, ut egestas erat. Etiam venenatis porta sem, non ultricies sapien suscipit a. Etiam euismod dui a gravida scelerisque. Morbi et risus blandit, venenatis enim at, finibus ligula. Donec pharetra hendrerit tortor, non molestie massa mattis sed.</p>
+              </div>
+              <div class="mt-4">
+                <h2 class="text-lg font-semibold">Cosa troverai</h2>
+                <div class="grid grid-cols-2 gap-4 mt-2">
+                  <ul class="flex flex-col gap-2">
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M16.5 8c0 1.5-.5 3.5-2.9 4.3.7-1.7.8-3.4.3-5-.7-2.1-3-3.7-4.6-4.6-.4-.3-1.1.1-1 .7 0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5 3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5.8 5.9 5 7.5 7 7.5 1.7 0 5-1.2 5-6.4 0-3.1-1.3-5.5-2.4-6.9-.3-.5-1-.2-1.1.3"></path></svg>
+                      <span class="ml-2">Riscaldamento</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4c-4.071.001-7.874 1.561-10.707 4.395l1.414 1.414C5.163 7.353 8.463 6 12 6zm5.671 8.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0l1.414-1.414z"></path><path d="M20.437 11.293c-4.572-4.574-12.301-4.574-16.873 0l1.414 1.414c3.807-3.807 10.238-3.807 14.045 0l1.414-1.414z"></path><circle cx="12" cy="18" r="2"></circle></svg>
+                      <span class="ml-2">Wi-Fi</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M4 22h16a1 1 0 0 0 1-1V5c0-1.654-1.346-3-3-3H6C4.346 2 3 3.346 3 5v16a1 1 0 0 0 1 1zM18 3.924a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M12.766 16.929c1.399-.261 2.571-1.315 3.023-2.665a3.853 3.853 0 0 0-.153-2.893.482.482 0 0 0-.544-.266c-.604.149-1.019.448-1.5.801-.786.577-1.765 1.294-3.592 1.294-.813 0-1.45-.146-1.984-.354l-.013.009a4.006 4.006 0 0 0 4.763 4.074z"></path></svg>
+                      <span class="ml-2">Lavatrice</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M21 18.33A6.78 6.78 0 0 0 19.5 15a6.73 6.73 0 0 0-1.5 3.33 1.51 1.51 0 1 0 3 0zM11 20.33A6.78 6.78 0 0 0 9.5 17 6.73 6.73 0 0 0 8 20.33 1.59 1.59 0 0 0 9.5 22a1.59 1.59 0 0 0 1.5-1.67zM16 20.33A6.78 6.78 0 0 0 14.5 17a6.73 6.73 0 0 0-1.5 3.33A1.59 1.59 0 0 0 14.5 22a1.59 1.59 0 0 0 1.5-1.67zM6 18.33A6.78 6.78 0 0 0 4.5 15 6.73 6.73 0 0 0 3 18.33 1.59 1.59 0 0 0 4.5 20 1.59 1.59 0 0 0 6 18.33zM2 12h20v2H2zM13 4.07V2h-2v2.07A8 8 0 0 0 4.07 11h15.86A8 8 0 0 0 13 4.07z"></path></svg>                      
+                      <span class="ml-2">Doccia</span>
+                    </li>
+                  </ul>
+                  <ul class="flex flex-col gap-2">
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M4 22h16a1 1 0 0 0 1-1V5c0-1.654-1.346-3-3-3H6C4.346 2 3 3.346 3 5v16a1 1 0 0 0 1 1zM18 3.924a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 3.117c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M9.32 12.265c-.415.384-1.041.964-1.041 2.067 0 1.104.626 1.684 1.041 2.068.352.325.4.398.4.6h2c0-1.104-.626-1.684-1.041-2.068-.352-.325-.4-.398-.4-.6s.048-.275.4-.6c.414-.384 1.041-.964 1.041-2.068 0-1.103-.626-1.683-1.041-2.066-.351-.325-.399-.397-.399-.598h-2c0 1.104.627 1.683 1.042 2.066.351.324.399.396.399.597-.001.203-.05.276-.401.602zm4 0c-.414.384-1.04.964-1.04 2.067s.626 1.684 1.04 2.067c.351.325.399.398.399.601h2c0-1.104-.626-1.684-1.04-2.067-.351-.325-.399-.398-.399-.601s.049-.275.399-.601c.414-.384 1.04-.964 1.04-2.068 0-1.103-.626-1.682-1.04-2.065-.35-.324-.399-.397-.399-.598h-2c0 1.103.626 1.683 1.041 2.066.35.324.398.397.398.598.001.202-.048.275-.399.601z"></path></svg>
+                      <span class="ml-2">Asciugatrice</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M19 2H9c-1.103 0-2 .897-2 2v5.586l-4.707 4.707A1 1 0 0 0 3 16v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zm-8 18H5v-5.586l3-3 3 3V20zm8 0h-6v-4a.999.999 0 0 0 .707-1.707L9 9.586V4h10v16z"></path><path d="M11 6h2v2h-2zm4 0h2v2h-2zm0 4.031h2V12h-2zM15 14h2v2h-2zm-8 1h2v2H7z"></path></svg>
+                      <span class="ml-2">Casa domotizzata</span>
+                    </li>
+                    <li class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><circle cx="18" cy="4" r="2"></circle><path d="m17.836 12.014-4.345.725 3.29-4.113a1 1 0 0 0-.227-1.457l-6-4a.999.999 0 0 0-1.262.125l-4 4 1.414 1.414 3.42-3.42 2.584 1.723-2.681 3.352a5.913 5.913 0 0 0-5.5.752l1.451 1.451A3.972 3.972 0 0 1 8 12c2.206 0 4 1.794 4 4 0 .739-.216 1.425-.566 2.02l1.451 1.451A5.961 5.961 0 0 0 14 16c0-.445-.053-.878-.145-1.295L17 14.181V20h2v-7a.998.998 0 0 0-1.164-.986zM8 20c-2.206 0-4-1.794-4-4 0-.739.216-1.425.566-2.02l-1.451-1.451A5.961 5.961 0 0 0 2 16c0 3.309 2.691 6 6 6 1.294 0 2.49-.416 3.471-1.115l-1.451-1.451A3.972 3.972 0 0 1 8 20z"></path></svg>
+                        <span class="ml-2 line-through">Accessibile con le carrozzine</span>
+                    </li>
+                  </ul>
+                </div>
+                <button class="bg-transparent border rounded-md p-2 mt-4 font-bold">Mostra di più</button>
+              </div>
+              <div class="mt-4 mb-4">
+                <h2 class="text-lg font-semibold">Controlla la disponibilità</h2>
+                <div class="flex gap-8">
+                  <!-- Month Grid -->
+                  <div class="w-1/3 mt-4">
+                    <div class="flex justify-center items-center mb-2 text-sm font-semibold">
+                      <span>March 2025</span>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-xs text-gray-500 mb-2">
+                      <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-sm gap-1">
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-300 line-through">1</div>
+                      <div class="text-gray-300 line-through">2</div>
+                      <div class="text-gray-300 line-through">3</div>
+                      <div class="text-gray-300 line-through">4</div>
+                      <div class="text-gray-300 line-through">5</div>
+                      <div class="text-gray-300 line-through">6</div>
+                      <div class="text-gray-300 line-through">7</div>
+                      <div class="text-gray-300 line-through">8</div>
+                      <div class="text-gray-300 line-through">9</div>
+                      <div class="text-gray-300 line-through">10</div>
+                      <div class="text-gray-300 line-through">11</div>
+                      <div class="text-gray-300 line-through">12</div>
+                      <div class="text-gray-300 line-through">13</div>
+                      <div class="text-gray-300 line-through">14</div>
+                      <div class="text-gray-300 line-through">15</div>
+                      <div class="text-gray-300 line-through">16</div>
+                      <div class="text-gray-300 line-through">17</div>
+                      <div class="text-gray-300 line-through">18</div>
+                      <div class="text-gray-300 line-through">19</div>
+                      <div class="text-gray-300 line-through">20</div>
+                      <div class="text-gray-300 line-through">21</div>
+                      <div class="text-gray-300 line-through">22</div>
+                      <div class="text-gray-300 line-through">23</div>
+                      <div class="text-gray-300 line-through">24</div>
+                      <div class="text-gray-300 line-through">25</div>
+                      <div class="text-gray-300 line-through">26</div>
+                      <div class="text-gray-300 line-through">27</div>
+                      <div class="text-gray-300 line-through">28</div>
+                      <div class="text-gray-300 line-through">29</div>
+                      <div class="text-gray-300 line-through">30</div>
+                      <div class="text-gray-300 line-through">31</div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                    </div>
+                  </div>
+                  <div class="w-1/3 mt-4">
+                    <div class="flex justify-center items-center mb-2 text-sm font-semibold">
+                      <span>April 2025</span>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-xs text-gray-500 mb-2">
+                      <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-sm gap-1">
+                      <div class="text-gray-300 line-through"></div>
+                      <div class="text-gray-300 line-through"></div>
+                      <div class="text-gray-300 line-through">1</div>
+                      <div class="text-gray-300 line-through">2</div>
+                      <div class="text-gray-300 line-through">3</div>
+                      <div class="text-gray-300 line-through">4</div>
+                      <div class="text-gray-300 line-through">5</div>
+                      <div class="text-gray-300 line-through">6</div>
+                      <div class="text-gray-300 line-through">7</div>
+                      <div class="text-gray-300 line-through">8</div>
+                      <div class="text-gray-300 line-through">9</div>
+                      <div class="text-gray-300 line-through">10</div>
+                      <div class="text-gray-600">11</div>
+                      <div class="text-gray-600">12</div>
+                      <div class="text-gray-600">13</div>
+                      <div class="text-gray-600">14</div>
+                      <div class="text-gray-600">15</div>
+                      <div class="text-gray-600">16</div>
+                      <div class="text-gray-600">17</div>
+                      <div class="text-gray-600">18</div>
+                      <div class="text-gray-600">19</div>
+                      <div class="text-gray-600">20</div>
+                      <div class="text-gray-600">21</div>
+                      <div class="text-gray-600">22</div>
+                      <div class="text-gray-600">23</div>
+                      <div class="text-gray-600">24</div>
+                      <div class="text-gray-600">25</div>
+                      <div class="text-gray-600">26</div>
+                      <div class="text-gray-600">27</div>
+                      <div class="text-gray-600">28</div>
+                      <div class="text-gray-600">29</div>
+                      <div class="text-gray-600">30</div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                    </div>
+                  </div>
+                  <div class="w-1/3 mt-4">
+                    <div class="flex justify-center items-center mb-2 text-sm font-semibold">
+                      <span>May 2025</span>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-xs text-gray-500 mb-2">
+                      <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
+                    </div>
+                    <div class="grid grid-cols-7 text-center text-sm gap-1">
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600">1</div>
+                      <div class="text-gray-600">2</div>
+                      <div class="text-gray-600">3</div>
+                      <div class="text-gray-600">4</div>
+                      <div class="text-gray-600">5</div>
+                      <div class="text-gray-600">6</div>
+                      <div class="text-gray-600">7</div>
+                      <div class="text-gray-600">8</div>
+                      <div class="text-gray-600">9</div>
+                      <div class="text-gray-600">10</div>
+                      <div class="text-gray-600">11</div>
+                      <div class="text-gray-600">12</div>
+                      <div class="text-gray-600">13</div>
+                      <div class="text-gray-600">14</div>
+                      <div class="text-gray-600">15</div>
+                      <div class="text-gray-600">16</div>
+                      <div class="text-gray-600">17</div>
+                      <div class="text-gray-600">18</div>
+                      <div class="text-gray-600">19</div>
+                      <div class="text-gray-600">20</div>
+                      <div class="text-gray-600">21</div>
+                      <div class="text-gray-600">22</div>
+                      <div class="text-gray-600">23</div>
+                      <div class="text-gray-600">24</div>
+                      <div class="text-gray-600">25</div>
+                      <div class="text-gray-600">26</div>
+                      <div class="text-gray-600">27</div>
+                      <div class="text-gray-600">28</div>
+                      <div class="text-gray-600">29</div>
+                      <div class="text-gray-600">30</div>
+                      <div class="text-gray-600">31</div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                      <div class="text-gray-600"></div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="w-3/10">
+                <div class="p-4 rounded-md shadow-lg border border-gray-300 sticky top-4">
+                  <h3 class="text-lg font-semibold pb-2">Contattaci</h3>
+                  <form>
+                    <input type="text" placeholder="Nome" class="w-full p-2 rounded-md my-2 border" />
+                    <input type="text" placeholder="Cognome" class="w-full p-2 rounded-md my-2 border" />
+                    <input type="email" placeholder="Email" class="w-full p-2 rounded-md my-2 border" />
+                    <textarea placeholder="Messaggio" class="w-full p-2 rounded-md my-2 border" rows="4"></textarea>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md my-2">Invia</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="mx-auto max-w-7xl mt-4 h-180 mb-8">
+        <h2 class="text-lg font-semibold">Dove starai</h2>
+        <div class="flex mt-2 gap-4">
+            <div class="w-7/10" style="padding-bottom: 50%; position: relative;">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d697.5283036161527!2d9.031196663476878!3d45.62846191223551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786915c16821471%3A0xd61917881ae9857d!2sVia%20Padre%20Reina%2C%2011%2C%2021047%20Saronno%20VA!5e0!3m2!1sen!2sit!4v1741532054819!5m2!1sen!2sit" 
+              width="100%" 
+              height="100%" 
+              style="border:0; border-radius: 12px; position: absolute; top: 0; left: 0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>          
+            </div>
+          <style>
+            #nearby-places ul {
+              list-style: none;
+              padding: 0;
+            }
+            #nearby-places ul:first-child {
+              margin-bottom: 1rem;
+            }
+            #nearby-places ul li {
+              display: flex;
+              justify-content: space-between;
+              padding: 0.5rem 0;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+            #nearby-places ul li:last-child {
+              border-bottom: none;
+            }
+            #nearby-places ul li span:first-child {
+              font-size: .875rem;
+            }
+            #nearby-places ul li span:last-child {
+              color: rgba(0, 0, 0, 0.5);
+            }
+
+          </style>
+          <div class="w-3/10 p-4" id="nearby-places">
+            <h3 class="text-lg font-semibold">Places nearby</h3>
+            <ul>
+              <li>
+                <span>Supermercato</span>
+                <span>1 min</span>
+              </li>
+              <li>
+                <span>Stazione di Saronno</span>
+                <span>6 min</span>
+              </li>
+              <li>
+                <span>Centro storico</span>
+                <span>7 min</span>
+              </li>
+              <li>
+                <span>Ospedale</span>
+                <span>14 min</span>
+              </li>
+            </ul>
+            <h3 class="text-lg font-semibold mt-4">Università nelle vicinanze</h3>
+            <ul>
+              <li>
+                <span>Politecnico, Bovisa</span>
+                <span>20 min</span>
+              </li>
+              <li>
+                <span>Cattolica di Milano</span>
+                <span>46 min</span>
+              </li>
+              <li>
+                <span>Statale</span>
+                <span>46 min</span>
+              </li>
+              <li>
+                <span>Politecnico, Città studi</span>
+                <span>50 min</span>
+              </li>
+              <li>
+                <span>Bocconi</span>
+                <span>1h 10min</span>
+              </li>
+              <li>
+                <span>Università Insubria Varese</span>
+                <span>1h 15 min</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

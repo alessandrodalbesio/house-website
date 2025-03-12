@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 10px;
+            border: 3px solid #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50">
+        <nav class="bg-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-center h-16 items-center">
+                    <div class="flex space-x-10">
+                        <a href="#secondary-features" class="text-white text-lg font-bold">Chi siamo</a>
+                        <a href="#lista-stanze" class="text-white text-lg font-bold">Le stanze</a>
+                        <a href="#servizi" class="text-white text-lg font-bold">I servizi</a>
+                        <a href="#faqs" class="text-white text-lg font-bold">FAQs</a>
+                        <a href="#contatti" class="text-white text-lg font-bold">Contattaci</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        /* When we scroll down use a darker background for the header */
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.classList.add('bg-gray-800');
+            } else {
+                header.classList.remove('bg-gray-800');
+            }
+        });
+
+        /* Add a smooth scroll effect to the links in the header */
+        document.querySelectorAll('header a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+      
+
+    <!-- Main content -->
+    <main> 
+        <!-- Hero section -->    
+        <section style="background-image: url('./img/home.jpg'); background-size: cover; background-position: center; height: 100vh;">
+            <div class="relative isolate px-6 pt-14 lg:px-8 h-full flex items-center">
+                <div class="absolute inset-0 bg-black/30 z-0"></div> <!-- overlay layer -->
+                <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 z-10">
+                    <div class="text-center">
+                        <h1 class="text-6xl font-bold tracking-tight text-balance text-white sm:text-8xl">La tua nuova casa a Saronno</h1>
+                        <p class="mt-8 text-lg font-medium text-pretty text-white sm:text-xl/8">
+                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+                        </p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#" class="rounded-md bg-gray-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-gray-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">Get started</a>
+                            <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About section -->
+        <section id="secondary-features" class="py-16 p-4 mt-16">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2 space-y-4">
+                    <div class="w-full">
+                        <img src="./img/home.jpg" class="rounded-lg w-full h-96 object-cover object-center" alt="Casa a Saronno">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="flex flex-col justify-center h-full">
+                        <h2 class="text-3xl font-semibold mb-6">La tua nuova casa a Saronno</h2>
+                        <div class="flex flex-col justify-center space-y-2 text-lg text-gray-700">
+                            <p>Cerchi un posto comodo, moderno e accogliente dove vivere durante gli studi? Le nostre stanze a Saronno sono perfette per te!</p>
+                            <p>La casa è storica ma completamente ristrutturata, super accessoriata e con bagno privato in ogni stanza. Non manca proprio nulla: riscaldamento, aria condizionata, domotica e un supermercato proprio accanto.</p>
+                            <p>In pochi minuti sei in stazione e puoi raggiungere facilmente Milano, Como, Varese o l’aeroporto di Malpensa.</p>
+                            <p>Sei pronto a chiamarla casa?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Elenco stanze -->
+        <section id="lista-stanze" class="py-16 p-4">
+            <div class="mx-auto max-w-7xl">
+                <div class="mx-auto max-w-2xl sm:text-center mb-8">
+                    <h2 class="text-3xl font-semibold tracking-tight">Le nostre stanze ti aspettano</h2>
+                    <p class="mt-4 text-lg text-gray-600">Singole e doppie le nostre stanze ti aspettano. Ogni stanza è dotata di bagno privato, una scrivania per persona e tutto l'arredamento necessario.</p>
+                </div>
+                <ul role="list" id="rooms-list" class="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3">
+                    <li class="relative rounded-2xl hover:shadow-2xl transition duration-300" id="roomA">
+                        <img src="./img/roomA.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl opacity-60">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Non disponibile</span>
+                    </li>
+                    <li class="rounded-2xl relative hover:shadow-2xl transition duration-300" id="roomB">
+                        <img src="./img/roomB.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl opacity-60">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Non disponibile</span>
+                    </li>
+                    <li class="rounded-2xl relative hover:shadow-2xl transition duration-300" id="roomC">
+                        <img src="./img/roomC.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Disponibile</span>
+                    </li>
+                    <li class="relative rounded-2xl hover:shadow-2xl transition duration-300" id="roomD">
+                        <img src="./img/roomD.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Disponibile dal 28.02</span>
+                    </li>
+                    <li class="rounded-2xl relative hover:shadow-2xl transition duration-300" id="roomE">
+                        <img src="./img/roomE.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Disponibile dal 03.04</span>
+                    </li>
+                    <li class="rounded-2xl relative hover:shadow-2xl transition duration-300" id="roomF">
+                        <img src="./img/roomF.jpg" alt="Camera 1" class="w-full h-72 object-cover object-center rounded-2xl">
+                        <span class="absolute top-4 left-4 bg-gray-600 text-white text-m font-semibold px-2 py-1 rounded">Disponibile</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script>
+            /* Add the onclick on the li elements */
+            document.querySelectorAll('#rooms-list li').forEach(li => {
+                li.addEventListener('click', () => {
+                    /* Redirect to the room page and pass as an argument the room id */
+                    window.location.href = `room.html?room=${li.id}`;
+                });
+            });
+        </script>
+
+        <!-- Features section -->
+        <section id="servizi" class="py-16 p-4">
+            <div class="mx-auto max-w-7xl">
+                <div class="mx-auto max-w-2xl sm:text-center mb-8">
+                    <h2 class="text-3xl font-semibold tracking-tight">Scopri i nostri servizi</h2>
+                    <p class="mt-4 text-lg text-gray-600">Ecco come la nostra casa condivisa può supportarti nel raggiungere il successo accademico, offrendoti un ambiente ideale per studiare e crescere.</p>
+                </div>
+                <ul role="list" class="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3">
+                    <li class="rounded-2xl border border-gray-200 p-8 relative group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M16.375 2H7.621c-.224 0-1.399.065-2.503 1.351C4.031 4.616 4 5.862 4 6v11a2 2 0 0 0 2 2h1l-2 3h2.353l.667-1h8l.677 1H19l-2-3h1a2 2 0 0 0 2-2V6c.001-.188-.032-1.434-1.129-2.665C17.715 2.037 16.509 2 16.375 2zM10 4h4v2h-4V4zM7.5 17a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 7.5 17zm9 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 16.5 17zm1.5-5H6V8h12v4z"></path>
+                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">Stazione a pochi minuti</h3>
+                        <p class="mt-2 md:text-md">Grazie alla sua vicinanza con la stazione di Saronno potrai facilmente raggiungere Milano, Como, Varese e Malpensa</p>
+                    </li>
+                    <li class="rounded-2xl border border-gray-200 p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M21.999 8a.997.997 0 0 0-.143-.515L19.147 2.97A2.01 2.01 0 0 0 17.433 2H6.565c-.698 0-1.355.372-1.714.971L2.142 7.485A.997.997 0 0 0 1.999 8c0 1.005.386 1.914 1 2.618V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5h4v5a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-9.382c.614-.704 1-1.613 1-2.618zm-2.016.251A2.002 2.002 0 0 1 17.999 10c-1.103 0-2-.897-2-2 0-.068-.025-.128-.039-.192l.02-.004L15.219 4h2.214l2.55 4.251zm-9.977-.186L10.818 4h2.361l.813 4.065C13.957 9.138 13.079 10 11.999 10s-1.958-.862-1.993-1.935zM6.565 4h2.214l-.76 3.804.02.004c-.015.064-.04.124-.04.192 0 1.103-.897 2-2 2a2.002 2.002 0 0 1-1.984-1.749L6.565 4zm3.434 12h-4v-3h4v3z"></path>
+                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">Supermercato dietro l'angolo</h3>
+                        <p class="mt-2 text-md">Potrai acquistare tutto ciò che necessiti per le tue serate culinarie nel supermercato posto a fianco alla casa, aperto tutti i giorni fino alle 8 di sera!</p>
+                    </li>
+                    <li class="rounded-2xl border border-gray-200 p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M21 10H7V7.113c0-.997.678-1.923 1.661-2.085A2.003 2.003 0 0 1 11 7h2a4.003 4.003 0 0 0-4.398-3.98C6.523 3.222 5 5.089 5 7.178V10H3a1 1 0 0 0-1 1v2c0 2.606 1.674 4.823 4 5.65V22h2v-3h8v3h2v-3.35c2.326-.827 4-3.044 4-5.65v-2a1 1 0 0 0-1-1z"></path>                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">Bagno privato</h3>
+                        <p class="mt-2 text-md">Privacy garantita con un bagno privato per ogni stanza</p>
+                    </li>
+                    <li class="rounded-2xl border border-gray-200 p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M4 22h16a1 1 0 0 0 1-1V5c0-1.654-1.346-3-3-3H6C4.346 2 3 3.346 3 5v16a1 1 0 0 0 1 1zM18 3.924a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path><path d="M12.766 16.929c1.399-.261 2.571-1.315 3.023-2.665a3.853 3.853 0 0 0-.153-2.893.482.482 0 0 0-.544-.266c-.604.149-1.019.448-1.5.801-.786.577-1.765 1.294-3.592 1.294-.813 0-1.45-.146-1.984-.354l-.013.009a4.006 4.006 0 0 0 4.763 4.074z"></path>                        
+                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">Lavatrice & Asciugatrice</h3>
+                        <p class="mt-2 text-md">Lascia a casa il ferro da stiro! Due lavatrici e asciugatrici sono comprese nella casa e potria usufruirne quando ne avrai bisogno!</p>
+                    </li>
+                    <li class="rounded-2xl border border-gray-200 p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="m20 18-4-5h3l-4-5h2l-5-6-5 6h2l-4 5h3l-4 5h7v4h2v-4z"></path>                        
+                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">A poca distanza dalla natura</h3>
+                        <p class="mt-2 text-md">A pochi minuti in bici potrai raggiungere il Parco del Lura, un corridoio verde nel cuore della pianura padana.</p>
+                    </li>
+                    <li class="rounded-2xl border border-gray-200 p-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M20 18v-3a8 8 0 0 0-5-7.4V13h-1V5h-4v8H9V7.6A8 8 0 0 0 4 15v3H2v2h20v-2z"></path>                       
+                        </svg>
+                        <h3 class="mt-6 font-semibold text-lg">Casa completamente ristrutturata</h3>
+                        <p class="mt-2 text-md">La casa è stata completamente ristrutturata e dispone di riscaldamento a pavimento, aria condizionata, antifurto e domotizzazione.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- FAQs section -->
+        <section id="faqs" class="py-16 p-4">
+            <div class="mx-auto max-w-7xl">
+                <div class="mx-auto max-w-2xl sm:text-center">
+                    <h2 class="text-3xl font-medium tracking-tight">Domande frequenti</h2>
+                    <p class="mt-2 text-lg text-gray-600">Qui abbiamo riportato risposta alle domande più frequenti che ci sono state fatte. Se hai altre domande non esitare a <a href="#contatti" class="text-pretty font-semibold">contattarci</a>!
+                </div>
+                <ul role="list" class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:max-w-none lg:grid-cols-3">
+                    <li>
+                        <ul role="list" class="space-y-10">
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Chi può aaffittare una stanza?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Che documenti sono necessari per affittare una stanza?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Qual'è la durata del contratto?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="space-y-10">
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Che tipo di stanze avete?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Come posso pagare l'affitto?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Gli animali sono ammessi?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="space-y-10">
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Cosa è compreso nel contratto?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Come posso cancellare il contratto?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                            <li>
+                                <h3 class="text-lg/6 font-semibold">Come posso fare se si rompe qualcosa?</h3>
+                                <p class="mt-4 text-sm text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor congue nunc in ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas cursus eros ac erat lobortis, vitae aliquet mauris cursus.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Contact section -->
+        <section class="py-20 p-4" id="contatti">
+            <div class="mx-auto max-w-7xl flex flex-col md:flex-row gap-12">
+                <!-- Map when tablet / computer -->
+                <div class="md:w-1/2 space-y-4 hidden md:block">
+                    <div class="w-full h-128">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d697.5283036161527!2d9.031196663476878!3d45.62846191223551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786915c16821471%3A0xd61917881ae9857d!2sVia%20Padre%20Reina%2C%2011%2C%2021047%20Saronno%20VA!5e0!3m2!1sen!2sit!4v1741532054819!5m2!1sen!2sit" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Contact section -->
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <h2 class="text-3xl font-semibold">Contattaci</h2>
+                    <p class="mt-2 mb-8 text-lg text-gray-600">
+                        Hai trovato la tua stanza o vuoi altre informazioni? Compila il form qui sotto e ti ricontatteremo presto!
+                    </p>
+                    <form class="space-y-4">
+                        <div class="flex space-x-4">
+                            <input type="text" id="contact.name" placeholder="Nome" class="w-1/2 p-2 border rounded-md" required>
+                            <input type="text" id="contact.surname" placeholder="Cognome" class="w-1/2 p-2 border rounded-md" required>
+                        </div>
+                        <input type="email" id="contact.email" placeholder="Email" class="w-full p-2 border rounded-md" required>
+                        <textarea id="contact.message" placeholder="Il tuo messaggio" class="w-full p-2 border rounded-md" rows="4" required></textarea>
+                        <div class="flex justify-end pt-4">
+                            <button id="contact.submit" type="submit" class="px-4 py-2 bg-transparent border text-md font-bold rounded-md">Invia messaggio</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Map when on mobile -->
+                <div class="block md:hidden">
+                    <div class="w-full h-full aspect-square">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d697.5283036161527!2d9.031196663476878!3d45.62846191223551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786915c16821471%3A0xd61917881ae9857d!2sVia%20Padre%20Reina%2C%2011%2C%2021047%20Saronno%20VA!5e0!3m2!1sen!2sit!4v1741532054819!5m2!1sen!2sit" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>      
+
+    <footer class="border-t border-gray-200 py-4">
+        <p class="text-center">&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+      
+    
+  </body>
+</html>
